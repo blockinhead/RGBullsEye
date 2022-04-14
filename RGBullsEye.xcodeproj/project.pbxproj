@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		09A3613C27F980CB0096006F /* RGBullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3613B27F980CB0096006F /* RGBullsEyeTests.swift */; };
 		09A3614627F980CB0096006F /* RGBullsEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3614527F980CB0096006F /* RGBullsEyeUITests.swift */; };
 		09A3614827F980CB0096006F /* RGBullsEyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3614727F980CB0096006F /* RGBullsEyeUITestsLaunchTests.swift */; };
+		09A3615627FA24F80096006F /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3615527FA24F80096006F /* RGB.swift */; };
+		D78FB13327FDF25800EA3CD7 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FB13227FDF25800EA3CD7 /* ExtensionColor.swift */; };
+		D78FB14127FDF9A700EA3CD7 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78FB14027FDF9A700EA3CD7 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		09A3614127F980CB0096006F /* RGBullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGBullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A3614527F980CB0096006F /* RGBullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBullsEyeUITests.swift; sourceTree = "<group>"; };
 		09A3614727F980CB0096006F /* RGBullsEyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBullsEyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		09A3615527FA24F80096006F /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
+		D78FB13227FDF25800EA3CD7 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		D78FB14027FDF9A700EA3CD7 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		09A3612927F980C90096006F /* RGBullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				09A3615427FA24C90096006F /* model */,
 				09A3612A27F980C90096006F /* RGBullsEyeApp.swift */,
 				09A3612C27F980C90096006F /* ContentView.swift */,
 				09A3612E27F980CB0096006F /* Assets.xcassets */,
@@ -125,6 +132,16 @@
 				09A3614727F980CB0096006F /* RGBullsEyeUITestsLaunchTests.swift */,
 			);
 			path = RGBullsEyeUITests;
+			sourceTree = "<group>";
+		};
+		09A3615427FA24C90096006F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				09A3615527FA24F80096006F /* RGB.swift */,
+				D78FB13227FDF25800EA3CD7 /* ExtensionColor.swift */,
+				D78FB14027FDF9A700EA3CD7 /* Game.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +224,7 @@
 				};
 			};
 			buildConfigurationList = 09A3612227F980C80096006F /* Build configuration list for PBXProject "RGBullsEye" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -257,7 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A3615627FA24F80096006F /* RGB.swift in Sources */,
 				09A3612D27F980C90096006F /* ContentView.swift in Sources */,
+				D78FB13327FDF25800EA3CD7 /* ExtensionColor.swift in Sources */,
+				D78FB14127FDF9A700EA3CD7 /* Game.swift in Sources */,
 				09A3612B27F980C90096006F /* RGBullsEyeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,10 +366,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -401,9 +422,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -475,7 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.babaka.RGBullsEyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,7 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.babaka.RGBullsEyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
